@@ -14,6 +14,12 @@
 		650B090220E2C0C0001952FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650B090020E2C0C0001952FF /* LaunchScreen.storyboard */; };
 		650B090D20E2C0C0001952FF /* CeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B090C20E2C0C0001952FF /* CeniTests.swift */; };
 		650B091820E2C0C0001952FF /* CeniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B091720E2C0C0001952FF /* CeniUITests.swift */; };
+		650B092720E2C4C2001952FF /* ceni_intro_vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 650B092520E2C4C1001952FF /* ceni_intro_vid.mp4 */; };
+		650B092820E2C4C2001952FF /* card_intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 650B092620E2C4C1001952FF /* card_intro.mp4 */; };
+		650B092C20E2C9FC001952FF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B092B20E2C9FC001952FF /* MenuItem.swift */; };
+		650B092E20E2CE33001952FF /* UITableViewControllerMainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B092D20E2CE33001952FF /* UITableViewControllerMainMenuTableViewController.swift */; };
+		650B093220E2E664001952FF /* ViewControllerBureau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B093120E2E664001952FF /* ViewControllerBureau.swift */; };
+		650B093420E2EBE1001952FF /* ViewControllerCandidats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +53,12 @@
 		650B091320E2C0C0001952FF /* CeniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650B091720E2C0C0001952FF /* CeniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeniUITests.swift; sourceTree = "<group>"; };
 		650B091920E2C0C0001952FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		650B092520E2C4C1001952FF /* ceni_intro_vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ceni_intro_vid.mp4; sourceTree = "<group>"; };
+		650B092620E2C4C1001952FF /* card_intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = card_intro.mp4; sourceTree = "<group>"; };
+		650B092B20E2C9FC001952FF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		650B092D20E2CE33001952FF /* UITableViewControllerMainMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerMainMenuTableViewController.swift; sourceTree = "<group>"; };
+		650B093120E2E664001952FF /* ViewControllerBureau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBureau.swift; sourceTree = "<group>"; };
+		650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCandidats.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +112,13 @@
 				650B08F720E2C0BD001952FF /* AppDelegate.swift */,
 				650B08F920E2C0BD001952FF /* ViewController.swift */,
 				650B08FB20E2C0BD001952FF /* Main.storyboard */,
+				650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */,
+				650B093120E2E664001952FF /* ViewControllerBureau.swift */,
+				650B092D20E2CE33001952FF /* UITableViewControllerMainMenuTableViewController.swift */,
+				650B092B20E2C9FC001952FF /* MenuItem.swift */,
 				650B08FE20E2C0C0001952FF /* Assets.xcassets */,
+				650B092620E2C4C1001952FF /* card_intro.mp4 */,
+				650B092520E2C4C1001952FF /* ceni_intro_vid.mp4 */,
 				650B090020E2C0C0001952FF /* LaunchScreen.storyboard */,
 				650B090320E2C0C0001952FF /* Info.plist */,
 			);
@@ -229,7 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650B092820E2C4C2001952FF /* card_intro.mp4 in Resources */,
 				650B090220E2C0C0001952FF /* LaunchScreen.storyboard in Resources */,
+				650B092720E2C4C2001952FF /* ceni_intro_vid.mp4 in Resources */,
 				650B08FF20E2C0C0001952FF /* Assets.xcassets in Resources */,
 				650B08FD20E2C0BD001952FF /* Main.storyboard in Resources */,
 			);
@@ -256,8 +276,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				650B093220E2E664001952FF /* ViewControllerBureau.swift in Sources */,
+				650B092C20E2C9FC001952FF /* MenuItem.swift in Sources */,
+				650B093420E2EBE1001952FF /* ViewControllerCandidats.swift in Sources */,
 				650B08FA20E2C0BD001952FF /* ViewController.swift in Sources */,
 				650B08F820E2C0BD001952FF /* AppDelegate.swift in Sources */,
+				650B092E20E2CE33001952FF /* UITableViewControllerMainMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,6 +457,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57396JS5DB;
 				INFOPLIST_FILE = Ceni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +476,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57396JS5DB;
 				INFOPLIST_FILE = Ceni/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
