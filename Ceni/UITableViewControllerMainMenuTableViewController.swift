@@ -131,6 +131,10 @@ class UITableViewControllerMainMenuTableViewController: UITableViewController {
             self.performSegue(withIdentifier: SEG_ID_CONTACT, sender: self)
             break
             
+        case 5:
+            self.performSegue(withIdentifier: SEG_ID_FAQ, sender: self)
+            break
+            
         default:
             print("default")
         }

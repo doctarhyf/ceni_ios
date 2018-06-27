@@ -95,6 +95,7 @@
                         <segue destination="YhL-tb-dVY" kind="show" identifier="bureau" id="83n-92-M1L"/>
                         <segue destination="F59-xg-LpO" kind="show" identifier="contact" id="7V1-aM-Qnn"/>
                         <segue destination="tKo-6z-Urq" kind="show" identifier="news" id="qg6-1V-Axq"/>
+                        <segue destination="UcT-VK-OXB" kind="show" identifier="faq" id="lS5-uR-rYq"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0ae-8U-7W6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -265,6 +266,72 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="er7-Kt-mgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3161" y="781"/>
+        </scene>
+        <!--FAQ-->
+        <scene sceneID="5Eq-6O-ywP">
+            <objects>
+                <tableViewController title="FAQ" id="UcT-VK-OXB" customClass="TableViewControllerFAQ" customModule="Ceni" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CEp-9o-6bh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellFAQ" id="DAY-by-0VK">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DAY-by-0VK" id="c5c-ie-lOX">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Me4-Tv-0Nz" kind="show" id="tt7-Nf-HOK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UcT-VK-OXB" id="zR2-My-bQu"/>
+                            <outlet property="delegate" destination="UcT-VK-OXB" id="t8M-9z-aBV"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HeO-XF-2AX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3905" y="780"/>
+        </scene>
+        <!--View ControllerFAQ View-->
+        <scene sceneID="Lv1-Ry-aVv">
+            <objects>
+                <viewController id="Me4-Tv-0Nz" customClass="ViewControllerFAQView" customModule="Ceni" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w6n-kR-gJH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Q" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fr-WP-8gm">
+                                <rect key="frame" x="0.0" y="64" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2k-dR-2IJ">
+                                <rect key="frame" x="0.0" y="93" width="375" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.42614556347150256" green="0.42614556347150256" blue="0.42614556347150256" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PEK-Lg-wRd"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelQ" destination="7fr-WP-8gm" id="7F0-lT-yjM"/>
+                        <outlet property="labelR" destination="P2k-dR-2IJ" id="wXm-rL-R8K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKQ-5i-6yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4725.6000000000004" y="779.46026986506752"/>
         </scene>
         <!--NOUS CONTACTER-->
         <scene sceneID="0p1-z3-Yn1">
