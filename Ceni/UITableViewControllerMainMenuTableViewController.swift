@@ -29,6 +29,10 @@ class UITableViewControllerMainMenuTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -71,6 +75,10 @@ class UITableViewControllerMainMenuTableViewController: UITableViewController {
         
         
         
+    }
+    
+    override var shouldAutorotate: Bool{
+        return true
     }
 
     override func didReceiveMemoryWarning() {

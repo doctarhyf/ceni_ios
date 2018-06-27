@@ -23,8 +23,15 @@ class ViewControllerCandidats: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
 
         // Do any additional setup after loading the view.
+    }
+    
+    override var shouldAutorotate: Bool{
+        return true
     }
 
     override func didReceiveMemoryWarning() {
