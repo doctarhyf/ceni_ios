@@ -16,8 +16,8 @@ class ViewControllerCandidats: UIViewController {
     @IBOutlet weak var tfDOB: UITextField!
     @IBAction func checkListCands(_ sender: Any) {
         
-        let alert = UIAlertController(title: "Option pas encore disponible",
-                                      message:"Cette option sera disponible très prochainement.", preferredStyle: UIAlertControllerStyle.alert)
+        let alert = UIAlertController(title: Strings.TITLE_DG_COMING_SOON,
+                                      message:Strings.MSG_DG_COMING_SOON, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:nil))
         self.present(alert, animated:true, completion:nil)
     }

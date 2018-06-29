@@ -10,14 +10,14 @@ import UIKit
 
 
 
-class UITableViewControllerMainMenuTableViewController: UITableViewController {
+class UITableViewControllerMainMenu: UITableViewController {
 
     var mainMenuArray = [MenuItem]()
     let SEG_ID_VOTESIM = "voteSim"
     let SEG_ID_CANDS = "cands"
     let SEG_ID_BUREAU = "bureau"
     let SEG_ID_LIST_CAND = "listCand"
-    let SEG_ID_RES_OFF = "resOff"
+    let SEG_ID_RES_OFF = "res"
     let SEG_ID_FAQ = "faq"
     let SEG_ID_CONTACT = "contact"
     let SEG_ID_NEWS = "news"
@@ -121,6 +121,14 @@ class UITableViewControllerMainMenuTableViewController: UITableViewController {
             
         case 2:
             self.performSegue(withIdentifier: SEG_ID_BUREAU, sender: self)
+            break
+            
+        case 3:
+            self.performSegue(withIdentifier: SEG_ID_LIST_CAND, sender: self)
+            break
+            
+        case 4:
+            self.performSegue(withIdentifier: SEG_ID_RES_OFF, sender: self)
             break
             
         case 6:

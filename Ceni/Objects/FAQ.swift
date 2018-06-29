@@ -10,6 +10,7 @@ import Foundation
 
 struct FAQ {
     
+    var i:Int
     var q :String
     var r :String
 }

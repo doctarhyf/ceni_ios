@@ -10,8 +10,8 @@ import UIKit
 
 class ViewControllerFAQView: UIViewController {
 
-    @IBOutlet weak var labelR: UILabel!
-    @IBOutlet weak var labelQ: UILabel!
+    @IBOutlet weak var labelR: UITextView!
+    @IBOutlet weak var labelQ: UITextView!
     var faq:FAQ?
     override func viewDidLoad() {
         super.viewDidLoad()

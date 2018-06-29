@@ -1,19 +1,17 @@
 //
-//  TableViewControllerFAQ.swift
+//  TableViewControllerResults.swift
 //  Ceni
 //
-//  Created by Docta Rhyf on 6/27/18.
+//  Created by Docta Rhyf on 6/29/18.
 //  Copyright © 2018 KOZI Engineering. All rights reserved.
 //
 
 import UIKit
 
-class TableViewControllerFAQ: UITableViewController {
+class TableViewControllerResults: UITableViewController {
 
-    let cellID = "cellFAQ"
-    var faqData = [FAQ]()
-    let faqFile = "faq.txt"
-    
+    var voteTypes:[String]?
+    let cellID = "cellRes"
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,71 +20,8 @@ class TableViewControllerFAQ: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        voteTypes = VOTE_TYPES.DATA;
         
-        
-        faqData = loadFAQData()
-    }
-    
-    func loadFAQData() -> [FAQ] {
-        
-        var data = [FAQ]()
-        
-        if let filePath = Bundle.main.path(forResource: "faq", ofType: "txt"){
-            do{
-                let contents = try String (contentsOfFile: filePath)
-                
-                var splits = [String]()
-                splits = contents.components(separatedBy:  "><")
-                
-                print(splits)
-                
-                for i in 0...splits.count{
-                    
-                    let idxq = i * 2
-                    let idxr = idxq+1
-                    
-                    if(idxr<splits.count){
-                        
-                        
-                        var q:String = splits[idxq] as String
-                        q = q.replacingOccurrences(of: "<", with: "");
-                        var r = splits[idxr]
-                        
-                        let faq = FAQ(i:idxq, q:q , r: r)
-                        data.insert(faq, at: i)
-                    }
-                }
-            
-                
-                //print(contents)
-            }catch{
-                print("Error loading file")
-            }
-        }else{
-            print("file faq.txt not found")
-        }
-        
-        /*
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first{
-            let fileURL = dir.appendingPathComponent(self.faqFile)
-            
-            do{
-                let fileData = try String(contentsOf: fileURL, encoding: .utf8)
-                print(fileData)
-            }catch{
-                print("error loading data")
-            }
-        }*/
-        
-        
-        /*
-        for index in 0 ... 50{
-            
-            let faq = FAQ(q: "Question \(index)", r:"Response \(index)")
-            data.insert(faq, at: index)
-        }*/
-        
-        return data
     }
 
     override func didReceiveMemoryWarning() {
@@ -103,18 +38,25 @@ class TableViewControllerFAQ: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return faqData.count
+        return (voteTypes?.count)!
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
 
-        cell.textLabel?.text = faqData[indexPath.row].q
+        cell.textLabel?.text = voteTypes?[indexPath.row]
 
         return cell
     }
  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alert = UIAlertController(title: Strings.TITLE_DG_COMING_SOON,
+                                      message:Strings.MSG_DG_COMING_SOON, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:nil))
+        self.present(alert, animated:true, completion:nil)
+    }
 
     /*
     // Override to support conditional editing of the table view.
@@ -151,18 +93,14 @@ class TableViewControllerFAQ: UITableViewController {
     }
     */
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        let faq = faqData[(self.tableView.indexPathForSelectedRow?.row)!]
-        let destination = segue.destination as! ViewControllerFAQView
-        
-        destination.faq = faq
     }
- 
+    */
 
 }

@@ -88,7 +88,7 @@ class ViewControllerMainVideo: UIViewController {
     
     
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-        return UIInterfaceOrientation.portrait
+        return UIInterfaceOrientation.landscapeLeft
     }
 
     override func didReceiveMemoryWarning() {
