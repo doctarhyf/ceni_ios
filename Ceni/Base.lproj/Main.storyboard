@@ -29,7 +29,7 @@
                                     <color key="titleColor" red="0.0" green="0.63146013021469116" blue="0.88063842058181763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="PUc-fC-fcl" kind="show" id="ldi-Oc-7cA"/>
+                                    <segue destination="PUc-fC-fcl" kind="show" identifier="" id="ldi-Oc-7cA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -46,7 +46,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="P5P-lP-uxt"/>
                     <connections>
+                        <outlet property="btnSkip" destination="mt4-7J-ppk" id="dPz-2S-jmM"/>
                         <outlet property="videoView" destination="RNX-Nj-8hx" id="M2n-jQ-JW1"/>
+                        <segue destination="PUc-fC-fcl" kind="show" identifier="menu" id="EBD-LE-aMU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -547,4 +549,7 @@
         <image name="ceni" width="300" height="300"/>
         <image name="ceni_embl" width="364" height="85"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EBD-LE-aMU"/>
+    </inferredMetricsTieBreakers>
 </document>

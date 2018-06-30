@@ -18,6 +18,7 @@ class ViewControllerMainVideo: UIViewController {
     var player :AVPlayer?
     var playerLayer:AVPlayerLayer?
     
+    @IBOutlet weak var btnSkip: UIButton!
     
     
     @IBOutlet weak var videoView: UIView!
@@ -76,14 +77,19 @@ class ViewControllerMainVideo: UIViewController {
         
         player?.play()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.playerDidFinishPlaying(note:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: player?.currentItem)
         
+    }
+    
+    @objc func playerDidFinishPlaying(note:NSNotification){
+        self.performSegue(withIdentifier: "menu", sender: self);
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
         return UIInterfaceOrientationMask.landscape
     }
     
-    
+      
     
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
         return UIInterfaceOrientation.landscapeLeft 
