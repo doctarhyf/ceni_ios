@@ -50,7 +50,7 @@ class TableViewControllerFAQ: UITableViewController {
                         
                         var q:String = splits[idxq] as String
                         q = q.replacingOccurrences(of: "<", with: "");
-                        var r = splits[idxr]
+                        let r = splits[idxr]
                         
                         let faq = FAQ(i:idxq, q:q , r: r)
                         data.insert(faq, at: i)
@@ -110,6 +110,10 @@ class TableViewControllerFAQ: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
 
+        let view = UIView()
+        view.backgroundColor = UIColor.yellow
+        cell.selectedBackgroundView = view
+        
         cell.textLabel?.text = faqData[indexPath.row].q
 
         return cell

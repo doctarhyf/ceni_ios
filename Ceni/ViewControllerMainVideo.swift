@@ -54,13 +54,11 @@ class ViewControllerMainVideo: UIViewController {
     
     
     override func viewWillAppear(_ animated: Bool) {
-        let statusBar:UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        statusBar.isHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        let statusBar:UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
-        statusBar.isHidden = false
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     func playVideo(){
@@ -88,7 +86,11 @@ class ViewControllerMainVideo: UIViewController {
     
     
     override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
-        return UIInterfaceOrientation.landscapeLeft
+        return UIInterfaceOrientation.landscapeLeft 
+    }
+    
+    override var prefersStatusBarHidden: Bool{
+        return true
     }
 
     override func didReceiveMemoryWarning() {
@@ -104,7 +106,7 @@ class ViewControllerMainVideo: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
-        var f = videoView.frame
+        
         playVideo()
     }
 

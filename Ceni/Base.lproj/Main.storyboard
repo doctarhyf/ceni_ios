@@ -25,9 +25,11 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mt4-7J-ppk">
                                 <rect key="frame" x="549" y="325" width="102" height="30"/>
-                                <state key="normal" title="Sauter la video"/>
+                                <state key="normal" title="Sauter la video">
+                                    <color key="titleColor" red="0.0" green="0.63146013021469116" blue="0.88063842058181763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
-                                    <segue destination="PUc-fC-fcl" kind="show" id="KSt-Pd-gWv"/>
+                                    <segue destination="PUc-fC-fcl" kind="show" id="ldi-Oc-7cA"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -142,6 +144,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HGn-nl-fIV">
                                                     <rect key="frame" x="15" y="0.0" width="228" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.63146013020000002" blue="0.88063842059999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

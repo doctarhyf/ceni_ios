@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //0 162 221
+        UINavigationBar.appearance().barTintColor = CENI_COLORS.CD_BLUE
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
+        let color = UIColor.white
+        let font = UIFont(name: "Helvetica", size: 20.0)
+        
+        let attributes:[NSAttributedStringKey:AnyObject] = [
+            NSAttributedStringKey.font:font!,
+            NSAttributedStringKey.foregroundColor:color
+        ]
+        
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        UIApplication.shared.statusBarStyle = .lightContent
         return true
     }
     

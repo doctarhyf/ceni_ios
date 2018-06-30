@@ -25,6 +25,7 @@
 		652C47F720E6353F00CDDA6A /* TableViewControllerCandsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47F620E6353F00CDDA6A /* TableViewControllerCandsList.swift */; };
 		652C47F920E63C2500CDDA6A /* ViewControllerVoteSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47F820E63C2500CDDA6A /* ViewControllerVoteSimulation.swift */; };
 		652C47FC20E63E4200CDDA6A /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47FB20E63E4200CDDA6A /* AppUtility.swift */; };
+		65B5EC3420E7FC44001FE196 /* CENI_COLORS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B5EC3320E7FC44001FE196 /* CENI_COLORS.swift */; };
 		65C907EA20E4392F00A896CE /* faq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C907E920E4392F00A896CE /* faq.txt */; };
 		65C907EC20E43A7B00A896CE /* TableViewControllerFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C907EB20E43A7B00A896CE /* TableViewControllerFAQ.swift */; };
 		65C907F020E43F8300A896CE /* ViewControllerFAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C907EF20E43F8300A896CE /* ViewControllerFAQView.swift */; };
@@ -74,6 +75,7 @@
 		652C47F620E6353F00CDDA6A /* TableViewControllerCandsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerCandsList.swift; sourceTree = "<group>"; };
 		652C47F820E63C2500CDDA6A /* ViewControllerVoteSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVoteSimulation.swift; sourceTree = "<group>"; };
 		652C47FB20E63E4200CDDA6A /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		65B5EC3320E7FC44001FE196 /* CENI_COLORS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CENI_COLORS.swift; sourceTree = "<group>"; };
 		65C907E920E4392F00A896CE /* faq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = faq.txt; sourceTree = "<group>"; };
 		65C907EB20E43A7B00A896CE /* TableViewControllerFAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerFAQ.swift; sourceTree = "<group>"; };
 		65C907EF20E43F8300A896CE /* ViewControllerFAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFAQView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 			children = (
 				65C907F120E4416500A896CE /* FAQ.swift */,
 				650B092B20E2C9FC001952FF /* MenuItem.swift */,
+				65B5EC3320E7FC44001FE196 /* CENI_COLORS.swift */,
 				652C47F020E6303000CDDA6A /* VOTE_TYPE.swift */,
 				652C47F420E6340500CDDA6A /* Strings.swift */,
 			);
@@ -343,6 +346,7 @@
 				652C47F920E63C2500CDDA6A /* ViewControllerVoteSimulation.swift in Sources */,
 				652C47FC20E63E4200CDDA6A /* AppUtility.swift in Sources */,
 				65C907F020E43F8300A896CE /* ViewControllerFAQView.swift in Sources */,
+				65B5EC3420E7FC44001FE196 /* CENI_COLORS.swift in Sources */,
 				65C907F220E4416500A896CE /* FAQ.swift in Sources */,
 				652C47F520E6340500CDDA6A /* Strings.swift in Sources */,
 				652C47F120E6303000CDDA6A /* VOTE_TYPE.swift in Sources */,

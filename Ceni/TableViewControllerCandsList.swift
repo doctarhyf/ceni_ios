@@ -44,6 +44,10 @@ class TableViewControllerCandsList: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellcl", for: indexPath)
+        
+        let view = UIView()
+        view.backgroundColor = UIColor.yellow
+        cell.selectedBackgroundView = view
 
         cell.textLabel?.text = voteTypes?[indexPath.row]
 

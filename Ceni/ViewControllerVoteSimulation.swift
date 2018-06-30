@@ -26,12 +26,18 @@ class ViewControllerVoteSimulation: UIViewController, UITableViewDelegate, UITab
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath)
         
         cell.textLabel?.text = simMenu[indexPath.row]
-        
+        let view = UIView()
         if(indexPath.row != 2){
-            cell.backgroundColor = UIColor.lightGray
+            cell.backgroundColor = CENI_COLORS.CD_LIGHT_GRAY
             cell.textLabel?.textColor = UIColor.white
+            view.backgroundColor = CENI_COLORS.CD_LIGHT_GRAY
+            
+        }else{
+            
+            view.backgroundColor = CENI_COLORS.CD_BLUE
+            
         }
-        
+        cell.selectedBackgroundView = view
         return cell
     }
     
@@ -50,6 +56,9 @@ class ViewControllerVoteSimulation: UIViewController, UITableViewDelegate, UITab
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
 
         // Do any additional setup after loading the view.
     }

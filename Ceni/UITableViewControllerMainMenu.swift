@@ -33,6 +33,8 @@ class UITableViewControllerMainMenu: UITableViewController {
         let value = UIInterfaceOrientation.portrait.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
         
+      
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -40,25 +42,25 @@ class UITableViewControllerMainMenu: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         var menuItem = MenuItem(title:"Simuler un vote", subtitle:"Comment utiliser la machine a voter?")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("sim", at: 0)
+        mainMenuImagesNames.insert("ic_news", at: 0)
         
         
         menuItem = MenuItem(title:"Candidats", subtitle:"Suis-je inscrit sur la liste des candidats?")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("sim", at: 1)
+        mainMenuImagesNames.insert("ic_news", at: 1)
         
         menuItem = MenuItem(title:"Mon bureau de vote", subtitle:"Où se trouve mon bureau de vote?")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("bv", at: 2)
+        mainMenuImagesNames.insert("ic_news", at: 2)
         
         
         menuItem = MenuItem(title:"Liste des candidats", subtitle:"Candidats inscrits aux scrutins")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("cands", at: 3)
+        mainMenuImagesNames.insert("ic_news", at: 3)
         
         menuItem = MenuItem(title:"Résultats officiels", subtitle:"Résultats officiels des scrutins")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("res", at: 4)
+        mainMenuImagesNames.insert("ic_news", at: 4)
         
         menuItem = MenuItem(title:"Foire aux questions", subtitle:"Questions fréquentes sur les élections")
         mainMenuArray.append(menuItem)
@@ -77,8 +79,21 @@ class UITableViewControllerMainMenu: UITableViewController {
         
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask{
+        return UIInterfaceOrientationMask.portrait
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation{
+        return UIInterfaceOrientation.portrait
+    }
+    
     override var shouldAutorotate: Bool{
         return true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let value = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
     }
 
     override func didReceiveMemoryWarning() {
@@ -101,6 +116,11 @@ class UITableViewControllerMainMenu: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let view = UIView()
+        view.backgroundColor = UIColor.yellow
+        cell.selectedBackgroundView = view
+        
 
         cell.textLabel?.text = mainMenuArray[indexPath.row].title
         cell.detailTextLabel?.text = mainMenuArray[indexPath.row].subtitle
