@@ -42,21 +42,21 @@ class UITableViewControllerMainMenu: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         var menuItem = MenuItem(title:"Simuler un vote", subtitle:"Comment utiliser la machine a voter?")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("ic_news", at: 0)
+        mainMenuImagesNames.insert("sim", at: 0)
         
         
         menuItem = MenuItem(title:"Candidats", subtitle:"Suis-je inscrit sur la liste des candidats?")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("ic_news", at: 1)
+        mainMenuImagesNames.insert("cands", at: 1)
         
         menuItem = MenuItem(title:"Mon bureau de vote", subtitle:"Où se trouve mon bureau de vote?")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("ic_news", at: 2)
+        mainMenuImagesNames.insert("bv", at: 2)
         
         
         menuItem = MenuItem(title:"Liste des candidats", subtitle:"Candidats inscrits aux scrutins")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("ic_news", at: 3)
+        mainMenuImagesNames.insert("le", at: 3)
         
         menuItem = MenuItem(title:"Résultats officiels", subtitle:"Résultats officiels des scrutins")
         mainMenuArray.append(menuItem)
@@ -70,9 +70,9 @@ class UITableViewControllerMainMenu: UITableViewController {
         mainMenuArray.append(menuItem)
         mainMenuImagesNames.insert("ic_news", at: 6)
         
-        menuItem = MenuItem(title:"Contactez-nous", subtitle:"N'hésitez pas a nous contacter")
+        /*menuItem = MenuItem(title:"Contactez-nous", subtitle:"N'hésitez pas a nous contacter")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("ic_contacts", at: 7)
+        mainMenuImagesNames.insert("ic_contacts", at: 7)*/
         
         
         
@@ -157,6 +157,7 @@ class UITableViewControllerMainMenu: UITableViewController {
             
         case 7:
             self.performSegue(withIdentifier: SEG_ID_CONTACT, sender: self)
+            
             break
             
         case 5:
