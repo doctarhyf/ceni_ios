@@ -44,11 +44,13 @@ class ViewControllerVoteSimulation: UIViewController, UITableViewDelegate, UITab
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if(indexPath.row == 2){
-            //performSegue(withIdentifier: SEG_VOTES, sender: self)
-            let alert = UIAlertController(title: Strings.TITLE_DG_COMING_SOON,
-                                          message:Strings.MSG_DG_COMING_SOON, preferredStyle: UIAlertControllerStyle.alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:nil))
-            self.present(alert, animated:true, completion:nil)
+            performSegue(withIdentifier: SEG_VOTES, sender: self)
+            //let alert = UIAlertController(title: Strings.TITLE_DG_COMING_SOON,
+              //                            message:Strings.MSG_DG_COMING_SOON, preferredStyle: UIAlertControllerStyle.alert)
+            //alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler:nil))
+            //self.present(alert, animated:true, completion:nil)
+            //println("This is a test")
+            //print("test")
         }else{
             let alert = UIAlertController(title: Strings.TITLE_DG_OPTION_NOT_AVAIL,
                                           message:Strings.MSG_DG_OPTION_NOT_AVAIL, preferredStyle: UIAlertControllerStyle.alert)

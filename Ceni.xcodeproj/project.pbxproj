@@ -13,24 +13,30 @@
 		650B090220E2C0C0001952FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 650B090020E2C0C0001952FF /* LaunchScreen.storyboard */; };
 		650B090D20E2C0C0001952FF /* CeniTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B090C20E2C0C0001952FF /* CeniTests.swift */; };
 		650B091820E2C0C0001952FF /* CeniUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B091720E2C0C0001952FF /* CeniUITests.swift */; };
-		650B092720E2C4C2001952FF /* ceni_intro_vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 650B092520E2C4C1001952FF /* ceni_intro_vid.mp4 */; };
 		650B092820E2C4C2001952FF /* card_intro.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 650B092620E2C4C1001952FF /* card_intro.mp4 */; };
 		650B092C20E2C9FC001952FF /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B092B20E2C9FC001952FF /* MenuItem.swift */; };
 		650B092E20E2CE33001952FF /* UITableViewControllerMainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B092D20E2CE33001952FF /* UITableViewControllerMainMenu.swift */; };
 		650B093220E2E664001952FF /* ViewControllerBureau.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B093120E2E664001952FF /* ViewControllerBureau.swift */; };
 		650B093420E2EBE1001952FF /* ViewControllerCandidats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */; };
+		6514152C21BCFC58008C9B50 /* ViewControllerSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514152B21BCFC58008C9B50 /* ViewControllerSimulation.swift */; };
+		6514152E21BCFE1F008C9B50 /* ViewSimulationMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514152D21BCFE1F008C9B50 /* ViewSimulationMessage.swift */; };
+		6514153021BD0170008C9B50 /* ViewSimulationWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6514152F21BD0170008C9B50 /* ViewSimulationWarning.swift */; };
 		652C47EF20E62FDD00CDDA6A /* TableViewControllerResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47EE20E62FDD00CDDA6A /* TableViewControllerResults.swift */; };
 		652C47F120E6303000CDDA6A /* VOTE_TYPE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47F020E6303000CDDA6A /* VOTE_TYPE.swift */; };
 		652C47F520E6340500CDDA6A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47F420E6340500CDDA6A /* Strings.swift */; };
 		652C47F720E6353F00CDDA6A /* TableViewControllerCandsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47F620E6353F00CDDA6A /* TableViewControllerCandsList.swift */; };
 		652C47F920E63C2500CDDA6A /* ViewControllerVoteSimulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47F820E63C2500CDDA6A /* ViewControllerVoteSimulation.swift */; };
 		652C47FC20E63E4200CDDA6A /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652C47FB20E63E4200CDDA6A /* AppUtility.swift */; };
+		654D23FB21C025BB00655AAA /* ViewVoteCont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D23FA21C025BB00655AAA /* ViewVoteCont.swift */; };
+		654D23FD21C0299C00655AAA /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654D23FC21C0299C00655AAA /* CollectionViewCell.swift */; };
+		654D23FF21C0352300655AAA /* ceni_intro_vid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 654D23FE21C0352300655AAA /* ceni_intro_vid.mp4 */; };
 		65B5EC3420E7FC44001FE196 /* CENI_COLORS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B5EC3320E7FC44001FE196 /* CENI_COLORS.swift */; };
 		65C907EA20E4392F00A896CE /* faq.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C907E920E4392F00A896CE /* faq.txt */; };
 		65C907EC20E43A7B00A896CE /* TableViewControllerFAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C907EB20E43A7B00A896CE /* TableViewControllerFAQ.swift */; };
 		65C907F020E43F8300A896CE /* ViewControllerFAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C907EF20E43F8300A896CE /* ViewControllerFAQView.swift */; };
 		65C907F220E4416500A896CE /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C907F120E4416500A896CE /* FAQ.swift */; };
 		65D732DC20E417CC009F7F6C /* ViewControllerMainVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D732DB20E417CC009F7F6C /* ViewControllerMainVideo.swift */; };
+		65E9C52C21BD0EAC0067C294 /* ViewElectionPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E9C52B21BD0EAC0067C294 /* ViewElectionPane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,24 +69,30 @@
 		650B091320E2C0C0001952FF /* CeniUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CeniUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		650B091720E2C0C0001952FF /* CeniUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeniUITests.swift; sourceTree = "<group>"; };
 		650B091920E2C0C0001952FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		650B092520E2C4C1001952FF /* ceni_intro_vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ceni_intro_vid.mp4; sourceTree = "<group>"; };
 		650B092620E2C4C1001952FF /* card_intro.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = card_intro.mp4; sourceTree = "<group>"; };
 		650B092B20E2C9FC001952FF /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		650B092D20E2CE33001952FF /* UITableViewControllerMainMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewControllerMainMenu.swift; sourceTree = "<group>"; };
 		650B093120E2E664001952FF /* ViewControllerBureau.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBureau.swift; sourceTree = "<group>"; };
 		650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCandidats.swift; sourceTree = "<group>"; };
+		6514152B21BCFC58008C9B50 /* ViewControllerSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerSimulation.swift; sourceTree = "<group>"; };
+		6514152D21BCFE1F008C9B50 /* ViewSimulationMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSimulationMessage.swift; sourceTree = "<group>"; };
+		6514152F21BD0170008C9B50 /* ViewSimulationWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSimulationWarning.swift; sourceTree = "<group>"; };
 		652C47EE20E62FDD00CDDA6A /* TableViewControllerResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerResults.swift; sourceTree = "<group>"; };
 		652C47F020E6303000CDDA6A /* VOTE_TYPE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VOTE_TYPE.swift; sourceTree = "<group>"; };
 		652C47F420E6340500CDDA6A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		652C47F620E6353F00CDDA6A /* TableViewControllerCandsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerCandsList.swift; sourceTree = "<group>"; };
 		652C47F820E63C2500CDDA6A /* ViewControllerVoteSimulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerVoteSimulation.swift; sourceTree = "<group>"; };
 		652C47FB20E63E4200CDDA6A /* AppUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		654D23FA21C025BB00655AAA /* ViewVoteCont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewVoteCont.swift; sourceTree = "<group>"; };
+		654D23FC21C0299C00655AAA /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		654D23FE21C0352300655AAA /* ceni_intro_vid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ceni_intro_vid.mp4; sourceTree = "<group>"; };
 		65B5EC3320E7FC44001FE196 /* CENI_COLORS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CENI_COLORS.swift; sourceTree = "<group>"; };
 		65C907E920E4392F00A896CE /* faq.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = faq.txt; sourceTree = "<group>"; };
 		65C907EB20E43A7B00A896CE /* TableViewControllerFAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewControllerFAQ.swift; sourceTree = "<group>"; };
 		65C907EF20E43F8300A896CE /* ViewControllerFAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFAQView.swift; sourceTree = "<group>"; };
 		65C907F120E4416500A896CE /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		65D732DB20E417CC009F7F6C /* ViewControllerMainVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMainVideo.swift; sourceTree = "<group>"; };
+		65E9C52B21BD0EAC0067C294 /* ViewElectionPane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElectionPane.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +146,13 @@
 				650B08F720E2C0BD001952FF /* AppDelegate.swift */,
 				65D732DB20E417CC009F7F6C /* ViewControllerMainVideo.swift */,
 				650B08FB20E2C0BD001952FF /* Main.storyboard */,
+				6514152F21BD0170008C9B50 /* ViewSimulationWarning.swift */,
 				65C907EF20E43F8300A896CE /* ViewControllerFAQView.swift */,
+				654D23FA21C025BB00655AAA /* ViewVoteCont.swift */,
+				6514152B21BCFC58008C9B50 /* ViewControllerSimulation.swift */,
+				654D23FC21C0299C00655AAA /* CollectionViewCell.swift */,
+				65E9C52B21BD0EAC0067C294 /* ViewElectionPane.swift */,
+				6514152D21BCFE1F008C9B50 /* ViewSimulationMessage.swift */,
 				652C47F820E63C2500CDDA6A /* ViewControllerVoteSimulation.swift */,
 				650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */,
 				652C47F620E6353F00CDDA6A /* TableViewControllerCandsList.swift */,
@@ -186,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				65C907E920E4392F00A896CE /* faq.txt */,
+				654D23FE21C0352300655AAA /* ceni_intro_vid.mp4 */,
 				650B092620E2C4C1001952FF /* card_intro.mp4 */,
-				650B092520E2C4C1001952FF /* ceni_intro_vid.mp4 */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -306,10 +324,10 @@
 			files = (
 				650B092820E2C4C2001952FF /* card_intro.mp4 in Resources */,
 				650B090220E2C0C0001952FF /* LaunchScreen.storyboard in Resources */,
-				650B092720E2C4C2001952FF /* ceni_intro_vid.mp4 in Resources */,
 				65C907EA20E4392F00A896CE /* faq.txt in Resources */,
 				650B08FF20E2C0C0001952FF /* Assets.xcassets in Resources */,
 				650B08FD20E2C0BD001952FF /* Main.storyboard in Resources */,
+				654D23FF21C0352300655AAA /* ceni_intro_vid.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,10 +361,16 @@
 				65C907EC20E43A7B00A896CE /* TableViewControllerFAQ.swift in Sources */,
 				65D732DC20E417CC009F7F6C /* ViewControllerMainVideo.swift in Sources */,
 				650B092E20E2CE33001952FF /* UITableViewControllerMainMenu.swift in Sources */,
+				654D23FB21C025BB00655AAA /* ViewVoteCont.swift in Sources */,
+				654D23FD21C0299C00655AAA /* CollectionViewCell.swift in Sources */,
+				6514152E21BCFE1F008C9B50 /* ViewSimulationMessage.swift in Sources */,
+				65E9C52C21BD0EAC0067C294 /* ViewElectionPane.swift in Sources */,
 				652C47F920E63C2500CDDA6A /* ViewControllerVoteSimulation.swift in Sources */,
+				6514152C21BCFC58008C9B50 /* ViewControllerSimulation.swift in Sources */,
 				652C47FC20E63E4200CDDA6A /* AppUtility.swift in Sources */,
 				65C907F020E43F8300A896CE /* ViewControllerFAQView.swift in Sources */,
 				65B5EC3420E7FC44001FE196 /* CENI_COLORS.swift in Sources */,
+				6514153021BD0170008C9B50 /* ViewSimulationWarning.swift in Sources */,
 				65C907F220E4416500A896CE /* FAQ.swift in Sources */,
 				652C47F520E6340500CDDA6A /* Strings.swift in Sources */,
 				652C47F120E6303000CDDA6A /* VOTE_TYPE.swift in Sources */,
