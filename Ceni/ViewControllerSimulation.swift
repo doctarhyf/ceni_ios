@@ -19,14 +19,27 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
     let CARD_VID_TYPE = "mp4"
     var player :AVPlayer?
     var playerLayer:AVPlayerLayer?
+    var candsList : [Candidate] = [Candidate]()
+    var selectedCandID : Int = -1
+    var currentCand : Candidate? = nil
+    let COUNT_CANDS_PREZ : Int = 13
+    let COUNT_CANDS_DEP_NAT : Int = 18
+    let COUNT_CANDS_DEP_PROV : Int = 18
+    
 
     @IBOutlet weak var viewVoteCont: ViewVoteCont!
     @IBOutlet weak var viewElectionPane: UIView!
     @IBOutlet weak var videoView: UIView!
     @IBOutlet weak var viewWarning: ViewSimulationWarning!
     
+    @IBOutlet weak var votesTitle: UILabel!
     @IBOutlet weak var titleElectionPane: UILabel!
     @IBOutlet weak var btnInsertCard: UIButton!
+    
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +48,98 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
         
         //print("view already loaded")
         
-        videoView.backgroundColor = UIColor.black
+        initAll();
+        
+        
         
         
     }
     
+    func initAll(){
+        videoView.backgroundColor = UIColor.black
+        
+        initCandsData(count:COUNT_CANDS_PREZ)
+        
+        viewWarning.isHidden = false
+        viewVoteCont.isHidden = true
+        btnInsertCard.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        /*if(CAND_TYPE == "prez"){
+            viewVoteCont.isHidden = false
+            initCandsData(count:COUNT_CANDS_PREZ)
+            votesTitle.text = CURRENT_ELECTION_PANE
+            titleElectionPane.text = CURRENT_ELECTION_PANE
+            
+            showElectionsPane(title:CURRENT_ELECTION_PANE)
+        }*/
+        
+        
+        
+        if( (CAND_TYPE == "nat" || CAND_TYPE == "prov") && ACT_SEL_CAND_CONFIRM ){
+            initCandsData(count:COUNT_CANDS_DEP_NAT)
+            votesTitle.text = CURRENT_ELECTION_PANE
+            titleElectionPane.text = CURRENT_ELECTION_PANE
+            
+            showElectionsPane(title:CURRENT_ELECTION_PANE)
+            
+        }
+        
+        if(CAND_TYPE == "showRes"){
+            viewVoteCont.isHidden = true
+            btnInsertCard.isHidden = true
+            //print("showing result")
+            CAND_TYPE = "init"
+            performSegue(withIdentifier: "showRes", sender: self)
+            
+        }
+        
+        if(CAND_TYPE == "init"){
+            
+            btnInsertCard.isHidden = true
+            CAND_TYPE = "prez"
+            
+            //viewWarning.isHidden = false
+            //btnInsertCard.isHidden = false
+            
+        }
+        
+        
+        
+        print("will appear, CAND_TYPE \(CAND_TYPE)")
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        //viewVoteCont.isHidden = false
+        //viewWarning.isHidden = false
+        //btnInsertCard.isHidden = false
+        
+    }
+    
+    
+    
+    func initCandsData(count : Int){
+        
+        let candsCount = count
+        
+        candsList.removeAll()
+        
+        for i in 1 ... candsCount{
+            var cand : Candidate = Candidate(_nom: "Candidate \(i)", _prenom: "prenom\(i)", _partiName: "parti\(i)", _num:"\(i)")
+            
+            candsList.append(cand)
+        }
+        
+        collectionView.reloadData()
+        //print("cands count \(candsList.count)")
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 16
+        return candsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -51,19 +148,40 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
         
         //cell.displayContent(image: UIImage(named: "cd16")!, title: "Candidate")
         let i = indexPath.row + 1
-        print(i)
         
-        cell.displayContent(image: UIImage(named: "cd\(i)")!, nom: "Nom Postnom \(i)", prenom: "Prenom \(i)", num: "\(i)")
+        
+        currentCand = candsList[indexPath.row]
+        
+        cell.displayContent(image: UIImage(named: "cd\(i)")!, nom: (currentCand?.nom)!, prenom: (currentCand?.prenom)!, num: "\(i)")
         
         return cell
     }
-
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
+        
+        //var candID:Int = indexPath.item
+        
+        self.performSegue(withIdentifier: "presentCandPopup", sender: self)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if(segue.identifier == "presentCandPopup"){
+            let vc : ViewControllerCandidatePopup = segue.destination as! ViewControllerCandidatePopup
+            
+            vc.candidat = currentCand!
+            
+        }
+    }
+    
     @IBAction func insererCarte(_ sender: Any) {
         
         
         
             
-            
+            CAND_TYPE = "prez"
             
             
             let rect = CGRect(x: self.view.bounds.origin.x,
@@ -87,16 +205,20 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
         //self.performSegue(withIdentifier: "menu", sender: self);
         print("player did finish")
         videoView.isHidden = true
+        btnInsertCard.isHidden = true
         viewElectionPane.isHidden = false
         showElectionsPane(title:"Elections Présidentielles")
     }
     
     func showElectionsPane(title:String){
-        print("Showing pane : \(title)")
+        //print("Showing pane : \(title)")
         
         titleElectionPane.text = title
+        viewVoteCont.isHidden = true
+        viewElectionPane.isHidden = false
         
-        Timer.scheduledTimer(timeInterval: 1.1,
+        
+        Timer.scheduledTimer(timeInterval: 2,
                              target: self,
                              selector: #selector(self.fireElections(_:)),
                              userInfo: nil,
@@ -104,11 +226,12 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
         
         
         
+        
+        
     }
     
     @objc func  fireElections(_ timer:Timer)  {
         viewElectionPane.isHidden = true
-        //print("Elections fired!")
         viewVoteCont.isHidden = false
     }
     
@@ -117,6 +240,7 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
         
         viewWarning.isHidden = true
         videoView.isHidden = false
+        btnInsertCard.isHidden = false
         loadCardVideo()
     }
     
