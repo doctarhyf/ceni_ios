@@ -87,8 +87,15 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Bc-yK-Mao">
-                                        <rect key="frame" x="302" y="261" width="132" height="30"/>
-                                        <state key="normal" title="SIMULER UN VOTE"/>
+                                        <rect key="frame" x="296" y="261" width="144" height="30"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="6" minY="6" maxX="6" maxY="6"/>
+                                        <state key="normal" title="SIMULER UN VOTE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="onSkipWarning:" destination="NhN-4x-y4A" eventType="touchUpInside" id="KiP-Dp-DU1"/>
                                         </connections>
@@ -691,6 +698,10 @@ VOTE BLANC</string>
                                                     <constraint firstAttribute="height" constant="20" id="WaE-ne-4Ly"/>
                                                 </constraints>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-zQ-avR">
+                                                <rect key="frame" x="265" y="641" width="190" height="30"/>
+                                                <state key="normal" title="PARTAGER LES RESULTATS"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -702,6 +713,7 @@ VOTE BLANC</string>
                                             <constraint firstItem="DQ8-GR-nsc" firstAttribute="height" secondItem="ez3-aD-zwA" secondAttribute="height" id="aim-pi-eSZ"/>
                                             <constraint firstItem="DQ8-GR-nsc" firstAttribute="top" secondItem="ez3-aD-zwA" secondAttribute="top" id="e25-uh-GGo"/>
                                             <constraint firstItem="DQ8-GR-nsc" firstAttribute="width" secondItem="ez3-aD-zwA" secondAttribute="width" id="lWQ-B9-uG9"/>
+                                            <constraint firstItem="RRT-6V-SIS" firstAttribute="top" secondItem="MT9-zQ-avR" secondAttribute="bottom" constant="20" id="w7Y-fR-w4w"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -712,6 +724,7 @@ VOTE BLANC</string>
                                     <constraint firstItem="9K7-a7-5sD" firstAttribute="leading" secondItem="p6L-j3-vER" secondAttribute="leadingMargin" id="IvP-y1-Ou2"/>
                                     <constraint firstItem="9K7-a7-5sD" firstAttribute="centerX" secondItem="p6L-j3-vER" secondAttribute="centerX" id="Run-7O-1mB"/>
                                     <constraint firstItem="9K7-a7-5sD" firstAttribute="top" secondItem="p6L-j3-vER" secondAttribute="top" id="SEw-pK-Rt5"/>
+                                    <constraint firstItem="MT9-zQ-avR" firstAttribute="centerX" secondItem="p6L-j3-vER" secondAttribute="centerX" id="Uhh-XM-sTk"/>
                                     <constraint firstAttribute="trailing" secondItem="DQ8-GR-nsc" secondAttribute="trailing" constant="16" id="Z8H-Er-pPZ"/>
                                     <constraint firstItem="9K7-a7-5sD" firstAttribute="trailing" secondItem="p6L-j3-vER" secondAttribute="trailingMargin" id="aQt-28-Q8b"/>
                                     <constraint firstItem="ez3-aD-zwA" firstAttribute="leading" secondItem="p6L-j3-vER" secondAttribute="leading" constant="24" id="bIJ-BA-PBr"/>
