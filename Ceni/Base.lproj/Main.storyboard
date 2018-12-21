@@ -305,6 +305,7 @@ VOTE BLANC</string>
                                                 <connections>
                                                     <outlet property="candImage" destination="rh7-eo-aeg" id="1hD-9T-1qc"/>
                                                     <outlet property="candPrenom" destination="gxC-rs-Rf3" id="4pT-pm-Oej"/>
+                                                    <outlet property="imageParti" destination="cO1-et-2Sg" id="mz6-ZP-j51"/>
                                                     <outlet property="lblCandName" destination="c6P-ir-fd0" id="89b-Mn-eey"/>
                                                     <outlet property="lblCandNum" destination="bnG-of-WtI" id="Jul-jh-1Bh"/>
                                                 </connections>
@@ -701,6 +702,9 @@ VOTE BLANC</string>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-zQ-avR">
                                                 <rect key="frame" x="265" y="641" width="190" height="30"/>
                                                 <state key="normal" title="PARTAGER LES RESULTATS"/>
+                                                <connections>
+                                                    <action selector="shareImage:" destination="BXB-qa-9MN" eventType="touchUpInside" id="ITI-dZ-rHg"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -746,6 +750,26 @@ VOTE BLANC</string>
                         <viewLayoutGuide key="safeArea" id="t99-CB-pcC"/>
                     </view>
                     <size key="freeformSize" width="736" height="800"/>
+                    <connections>
+                        <outlet property="cdnImg" destination="uvE-Ic-sFV" id="PbU-1D-g97"/>
+                        <outlet property="cdnImgParti" destination="MeR-m0-YAd" id="y9m-yj-7k2"/>
+                        <outlet property="cdnNomPostnom" destination="alz-dT-2Jh" id="Ady-az-AjM"/>
+                        <outlet property="cdnNum" destination="pvP-RV-gsJ" id="lER-mq-Nfw"/>
+                        <outlet property="cdnParti" destination="L68-Qu-HKD" id="kAR-TZ-yMn"/>
+                        <outlet property="cdnPrenom" destination="FWP-fS-0Cm" id="aqh-LS-djv"/>
+                        <outlet property="cdpImg" destination="hus-LB-CEN" id="bCS-OR-kJb"/>
+                        <outlet property="cdpImgParti" destination="Dwb-i2-h3z" id="nJC-Gl-mo9"/>
+                        <outlet property="cdpNomPostnom" destination="Swy-Jf-rKZ" id="SOh-x8-YX5"/>
+                        <outlet property="cdpNum" destination="6oZ-SB-PNy" id="Crw-ik-Em5"/>
+                        <outlet property="cdpParti" destination="bOZ-rw-8qe" id="Wkn-k6-Tqc"/>
+                        <outlet property="cdpPrenom" destination="6AW-Pa-0zR" id="NnE-4I-6Po"/>
+                        <outlet property="cpImg" destination="4DG-5b-maS" id="cVo-M2-SDr"/>
+                        <outlet property="cpImgParti" destination="bjW-FU-ceR" id="wYE-gb-8QH"/>
+                        <outlet property="cpNomPostnom" destination="k8O-tC-hpU" id="ZID-F4-OK6"/>
+                        <outlet property="cpNum" destination="FJX-oe-lpY" id="MQN-jJ-Prk"/>
+                        <outlet property="cpParti" destination="fY7-pZ-HCu" id="Dvb-mK-OTj"/>
+                        <outlet property="cpPrenom" destination="ZAh-fs-mAo" id="k30-x3-W5a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkh-kr-f7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1182,7 +1206,7 @@ Veuillez confirmervotre choix</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeO-XF-2AX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3905" y="780"/>
+            <point key="canvasLocation" x="3567" y="1906"/>
         </scene>
         <!--View ControllerFAQ View-->
         <scene sceneID="Lv1-Ry-aVv">
@@ -1219,100 +1243,74 @@ Veuillez confirmervotre choix</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zKQ-5i-6yo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4725.6000000000004" y="779.46026986506752"/>
+            <point key="canvasLocation" x="3904" y="1045"/>
         </scene>
         <!--NOUS CONTACTER-->
         <scene sceneID="0p1-z3-Yn1">
             <objects>
                 <viewController title="NOUS CONTACTER" id="F59-xg-LpO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rvm-WN-ZJS">
-                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3y8-Xv-0K2">
-                                <rect key="frame" x="0.0" y="44" width="736" height="370"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3y8-Xv-0K2">
+                                <rect key="frame" x="0.0" y="44" width="736" height="956"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXb-wG-WYW">
-                                        <rect key="frame" x="35" y="24" width="257" height="476"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXb-wG-WYW">
+                                        <rect key="frame" x="0.0" y="0.0" width="736" height="1000"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w8-ZM-htC">
-                                                <rect key="frame" x="8" y="147" width="237" height="30"/>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Merci de saisir, ci-dessous, votre numéro d'électeur tel que écrit sur votre carte d'électeur" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Tc-t8-Rus">
+                                                <rect key="frame" x="8" y="15" width="704" height="79"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.66666668650000005" green="0.2049884069" blue="0.21287379049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nk8-IQ-Kj8">
+                                                <rect key="frame" x="8" y="109" width="704" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="votre message ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-dg-Uas">
-                                                <rect key="frame" x="8" y="185" width="237" height="237"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0w8-ZM-htC">
+                                                <rect key="frame" x="8" y="147" width="704" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="votre message ..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="M8s-dg-Uas">
+                                                <rect key="frame" x="8" y="185" width="704" height="660"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.63146013020000002" blue="0.88063842059999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Merci de saisir, ci-dessous, votre numéro d'électeur tel que écrit sur votre carte d'électeur" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Tc-t8-Rus">
-                                                <rect key="frame" x="8" y="15" width="237" height="79"/>
-                                                <color key="backgroundColor" red="0.66666668650000005" green="0.2049884069" blue="0.21287379049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="79" id="Pr2-Uo-gTG"/>
-                                                </constraints>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="votre nom" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nk8-IQ-Kj8">
-                                                <rect key="frame" x="8" y="109" width="237" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIB-lB-33t">
-                                                <rect key="frame" x="177" y="430" width="68" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MIB-lB-33t">
+                                                <rect key="frame" x="660" y="962" width="68" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="ENVOYER"/>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="4Tc-t8-Rus" firstAttribute="trailing" secondItem="nk8-IQ-Kj8" secondAttribute="trailing" id="4aO-0O-ZRW"/>
-                                            <constraint firstAttribute="height" constant="476" id="7OQ-LJ-tmL"/>
-                                            <constraint firstItem="M8s-dg-Uas" firstAttribute="trailing" secondItem="MIB-lB-33t" secondAttribute="trailing" id="DS2-dV-qH4"/>
-                                            <constraint firstAttribute="trailing" secondItem="4Tc-t8-Rus" secondAttribute="trailing" constant="12" id="H7x-zD-m8a"/>
-                                            <constraint firstItem="4Tc-t8-Rus" firstAttribute="leading" secondItem="tXb-wG-WYW" secondAttribute="leadingMargin" id="Jsj-nl-bRo"/>
-                                            <constraint firstItem="M8s-dg-Uas" firstAttribute="top" secondItem="0w8-ZM-htC" secondAttribute="bottom" constant="8" symbolic="YES" id="KAY-0l-dfU"/>
-                                            <constraint firstItem="nk8-IQ-Kj8" firstAttribute="trailing" secondItem="0w8-ZM-htC" secondAttribute="trailing" id="UBH-83-dQF"/>
-                                            <constraint firstItem="4Tc-t8-Rus" firstAttribute="top" secondItem="tXb-wG-WYW" secondAttribute="top" constant="15" id="WY1-Vo-h6k"/>
-                                            <constraint firstAttribute="width" constant="257" id="eBd-2p-1fB"/>
-                                            <constraint firstAttribute="bottom" secondItem="MIB-lB-33t" secondAttribute="bottom" constant="16" id="hCG-Df-QFp"/>
-                                            <constraint firstItem="4Tc-t8-Rus" firstAttribute="leading" secondItem="nk8-IQ-Kj8" secondAttribute="leading" id="iDd-rG-eDY"/>
-                                            <constraint firstItem="nk8-IQ-Kj8" firstAttribute="top" secondItem="4Tc-t8-Rus" secondAttribute="bottom" constant="15" id="jEy-IP-4Ob"/>
-                                            <constraint firstItem="MIB-lB-33t" firstAttribute="top" secondItem="M8s-dg-Uas" secondAttribute="bottom" constant="8" symbolic="YES" id="qTc-bl-UYt"/>
-                                            <constraint firstItem="0w8-ZM-htC" firstAttribute="trailing" secondItem="M8s-dg-Uas" secondAttribute="trailing" id="u47-Jp-kvg"/>
-                                            <constraint firstItem="nk8-IQ-Kj8" firstAttribute="leading" secondItem="0w8-ZM-htC" secondAttribute="leading" id="yo9-mI-JE1"/>
-                                            <constraint firstItem="0w8-ZM-htC" firstAttribute="top" secondItem="nk8-IQ-Kj8" secondAttribute="bottom" constant="8" symbolic="YES" id="zL7-en-bdA"/>
-                                            <constraint firstItem="0w8-ZM-htC" firstAttribute="leading" secondItem="M8s-dg-Uas" secondAttribute="leading" id="zbH-gy-mRx"/>
-                                        </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="tXb-wG-WYW" secondAttribute="bottom" constant="103" id="8sV-ie-FBW"/>
-                                    <constraint firstItem="tXb-wG-WYW" firstAttribute="top" secondItem="3y8-Xv-0K2" secondAttribute="top" constant="24" id="JLl-B5-1lY"/>
-                                    <constraint firstItem="tXb-wG-WYW" firstAttribute="leading" secondItem="3y8-Xv-0K2" secondAttribute="leading" constant="35" id="aMY-mz-hqP"/>
-                                    <constraint firstAttribute="trailing" secondItem="tXb-wG-WYW" secondAttribute="trailing" constant="83" id="m34-Sx-QYR"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="3y8-Xv-0K2" firstAttribute="top" secondItem="fJ1-0F-Owq" secondAttribute="top" id="25B-dG-d6C"/>
-                            <constraint firstItem="3y8-Xv-0K2" firstAttribute="bottom" secondItem="fJ1-0F-Owq" secondAttribute="bottom" id="551-J2-Gyt"/>
-                            <constraint firstItem="3y8-Xv-0K2" firstAttribute="leading" secondItem="Rvm-WN-ZJS" secondAttribute="leading" id="EIe-NV-xdF"/>
-                            <constraint firstAttribute="trailing" secondItem="3y8-Xv-0K2" secondAttribute="trailing" id="RDD-BO-D79"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="fJ1-0F-Owq"/>
                     </view>
+                    <size key="freeformSize" width="736" height="1000"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mBz-PZ-X3W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3904.8000000000002" y="115.59220389805098"/>
+            <point key="canvasLocation" x="4678.5326086956529" y="-46.376811594202906"/>
         </scene>
         <!--Liste des candidats-->
         <scene sceneID="5Jx-th-cdf">

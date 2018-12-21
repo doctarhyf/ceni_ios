@@ -57,6 +57,12 @@ class ViewControllerCandidatePopup: UIViewController {
         candNum.text = candidat.num
         partiName.text = candidat.partiName
         candNomPostnom.text = candidat.nom
+        candPrenom.text = candidat.prenom
+        image.image = candidat.img
+        imgParti.image = candidat.imgParti
+        
+        
+        print(candidat)
         
 
         
