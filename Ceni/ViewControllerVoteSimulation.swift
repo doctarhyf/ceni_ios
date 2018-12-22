@@ -10,11 +10,81 @@ import UIKit
 
 class ViewControllerVoteSimulation: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var labelCountDown: UILabel!
     let cellID = "cellSim"
     let simMenu = ["Installation", "Ouvrir les votes", "Passer au vote", "Cloturer les votes",
                    "Parametrage", "Imprimer","Transmettre les resultats"]
     
     let SEG_VOTES = "votes"
+    var counter = 30
+    var dueDate: Date?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let value = UIInterfaceOrientation.landscapeLeft.rawValue
+        UIDevice.current.setValue(value, forKey: "orientation")
+        
+        let calendar = Calendar.current
+        var dateComponents : DateComponents? = calendar.dateComponents([.hour, .minute, .second], from: Date())
+        
+        dateComponents?.day = 30
+        dateComponents?.month = 12
+        dateComponents?.year = 2018
+        
+        dueDate = calendar.date(from: dateComponents!)
+        //print("The date : \(date!)");
+        
+        //counter = dueDate?.timeIntervalSince1970.
+        
+        
+        var _ = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+        
+    }
+    
+    @objc func updateCounter(){
+        
+        /*
+        var s = counter
+        
+        var difftime = dueDate?.timeIntervalSinceNow
+        
+        print("due date : \(dueDate)")
+        print("date diff : \(difftime)")
+        
+        var diff : Int = Int(difftime!)
+        
+        var secsInMilli = 1000;
+        var minInMilli = secsInMilli * 1000
+        var hinMilli = minInMilli * 1000
+        var dinMill = hinMilli * 1000
+        
+        var diffDays = diff / dinMill;
+        diff = diff % dinMill
+        
+        print("diff : \(diff) , dinMill : \(dinMill), diff/dinMill \(Double(diff)/Double(dinMill))")
+        
+        var diffHours = diff / hinMilli;
+        diff = diff % hinMilli
+        
+        var diffMins = diff / minInMilli;
+        diff = diff % minInMilli
+        
+        var diffSecs = diff / secsInMilli;
+        */
+        
+        let nowDate = Date()
+        let cal = Calendar.current
+        
+        let d = cal.component(.day, from:nowDate)
+        let diffDays = 30 - d
+        
+        if(counter > 0 ){
+            print("\(counter) seconds to the end of the world");
+            counter -= 1
+            labelCountDown.text = "J - \(diffDays) "
+        }
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return simMenu.count
@@ -60,14 +130,7 @@ class ViewControllerVoteSimulation: UIViewController, UITableViewDelegate, UITab
     }
     
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        let value = UIInterfaceOrientation.landscapeLeft.rawValue
-        UIDevice.current.setValue(value, forKey: "orientation")
-
-        // Do any additional setup after loading the view.
-    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -70,9 +70,9 @@ class UITableViewControllerMainMenu: UITableViewController {
         mainMenuArray.append(menuItem)
         mainMenuImagesNames.insert("ic_news", at: 6)
         
-        /*menuItem = MenuItem(title:"Contactez-nous", subtitle:"N'hésitez pas a nous contacter")
+        menuItem = MenuItem(title:"Contactez-nous", subtitle:"N'hésitez pas a nous contacter")
         mainMenuArray.append(menuItem)
-        mainMenuImagesNames.insert("ic_contacts", at: 7)*/
+        mainMenuImagesNames.insert("ic_contacts", at: 7)
         
         
         

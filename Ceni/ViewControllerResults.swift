@@ -32,6 +32,7 @@ class ViewControllerResults: UIViewController {
     @IBOutlet weak var cdpNomPostnom: UILabel!
     @IBOutlet weak var cdpPrenom: UILabel!
     
+    @IBOutlet weak var mainView: UIView!
     
     
     
@@ -73,16 +74,39 @@ class ViewControllerResults: UIViewController {
     
     @IBAction func shareImage(_ sender: Any) {
         
-        let image = UIImage(named:"pt_eps")
+        let image = self.takeScreenShot(false)
         
-        let imageToShare = [image!]
+        let imageToShare = [image]
         let activityViewController = UIActivityViewController(activityItems: imageToShare, applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = self.view
         
-        activityViewController.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.postToFacebook]
+        //activityViewController.excludedActivityTypes = [UIActivityType.airDrop, UIActivityType.postToFacebook]
         
         self.present(activityViewController, animated: true, completion: nil)
+        
     }
+    
+    open func takeScreenShot(_ shouldSave :Bool = true) -> UIImage?{
+    
+        var screenShotImage : UIImage?
+        let layer = mainView.layer//UIApplication.shared.keyWindow!.layer;
+        let scale = layer.contentsScale// UIScreen.main.scale
+        UIGraphicsBeginImageContextWithOptions(layer.frame.size, false, scale)
+        guard let context = UIGraphicsGetCurrentContext() else {return nil}
+        layer.render(in:context)
+        screenShotImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if let image = screenShotImage, shouldSave{
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+        
+    
+    
+        return screenShotImage
+    
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
