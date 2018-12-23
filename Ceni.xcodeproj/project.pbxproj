@@ -54,6 +54,7 @@
 		65EBF51D21C6501000BC13DC /* candz_dep_nat.data in Resources */ = {isa = PBXBuildFile; fileRef = 65EBF50D21C6501000BC13DC /* candz_dep_nat.data */; };
 		65EBF51F21C6548700BC13DC /* CandsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EBF51E21C6548700BC13DC /* CandsData.swift */; };
 		65EBF52121C65BC800BC13DC /* ViewControllerCandidatePopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EBF52021C65BC800BC13DC /* ViewControllerCandidatePopup.swift */; };
+		65F094AD21CD5A1600D9C548 /* ViewResultCand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65F094AC21CD5A1600D9C548 /* ViewResultCand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +128,7 @@
 		65EBF50D21C6501000BC13DC /* candz_dep_nat.data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = candz_dep_nat.data; sourceTree = "<group>"; };
 		65EBF51E21C6548700BC13DC /* CandsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandsData.swift; sourceTree = "<group>"; };
 		65EBF52021C65BC800BC13DC /* ViewControllerCandidatePopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCandidatePopup.swift; sourceTree = "<group>"; };
+		65F094AC21CD5A1600D9C548 /* ViewResultCand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewResultCand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +182,7 @@
 				650B08F720E2C0BD001952FF /* AppDelegate.swift */,
 				65D732DB20E417CC009F7F6C /* ViewControllerMainVideo.swift */,
 				650B08FB20E2C0BD001952FF /* Main.storyboard */,
+				65F094AC21CD5A1600D9C548 /* ViewResultCand.swift */,
 				65EBF52021C65BC800BC13DC /* ViewControllerCandidatePopup.swift */,
 				6514152F21BD0170008C9B50 /* ViewSimulationWarning.swift */,
 				65C1280C21C810780027E992 /* ViewControllerResults.swift */,
@@ -193,12 +196,12 @@
 				650B093320E2EBE1001952FF /* ViewControllerCandidats.swift */,
 				652C47F620E6353F00CDDA6A /* TableViewControllerCandsList.swift */,
 				652C47EE20E62FDD00CDDA6A /* TableViewControllerResults.swift */,
+				650B093120E2E664001952FF /* ViewControllerBureau.swift */,
+				650B092D20E2CE33001952FF /* UITableViewControllerMainMenu.swift */,
 				652C47FA20E63E3300CDDA6A /* Utils */,
 				652C47F220E6309500CDDA6A /* Objects */,
 				65C907EB20E43A7B00A896CE /* TableViewControllerFAQ.swift */,
 				652C47F320E630B100CDDA6A /* Data */,
-				650B093120E2E664001952FF /* ViewControllerBureau.swift */,
-				650B092D20E2CE33001952FF /* UITableViewControllerMainMenu.swift */,
 				650B08FE20E2C0C0001952FF /* Assets.xcassets */,
 				650B090020E2C0C0001952FF /* LaunchScreen.storyboard */,
 				650B090320E2C0C0001952FF /* Info.plist */,
@@ -432,6 +435,7 @@
 				654D23FD21C0299C00655AAA /* CollectionViewCell.swift in Sources */,
 				6514152E21BCFE1F008C9B50 /* ViewSimulationMessage.swift in Sources */,
 				65E9C52C21BD0EAC0067C294 /* ViewElectionPane.swift in Sources */,
+				65F094AD21CD5A1600D9C548 /* ViewResultCand.swift in Sources */,
 				652C47F920E63C2500CDDA6A /* ViewControllerVoteSimulation.swift in Sources */,
 				6514152C21BCFC58008C9B50 /* ViewControllerSimulation.swift in Sources */,
 				652C47FC20E63E4200CDDA6A /* AppUtility.swift in Sources */,
@@ -615,14 +619,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6QFD44LDL7;
+				DEVELOPMENT_TEAM = 57396JS5DB;
 				INFOPLIST_FILE = Ceni/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.koziengineering.rdc.Ceni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.docta.rdc.Ceni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -634,14 +638,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6QFD44LDL7;
+				DEVELOPMENT_TEAM = 57396JS5DB;
 				INFOPLIST_FILE = Ceni/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.koziengineering.rdc.Ceni;
+				PRODUCT_BUNDLE_IDENTIFIER = com.docta.rdc.Ceni;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;

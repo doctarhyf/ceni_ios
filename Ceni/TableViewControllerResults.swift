@@ -22,6 +22,8 @@ class TableViewControllerResults: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         voteTypes = VOTE_TYPES.DATA;
         
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewCell: UICollectionViewCell {
     
     
+    @IBOutlet weak var imageParti: UIImageView!
     @IBOutlet weak var candImage: UIImageView!
     @IBOutlet weak var lblCandName: UILabel!
     
@@ -18,12 +19,13 @@ class CollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var candPrenom: UILabel!
     
-    func displayContent(image:UIImage, nom:String, prenom:String, num:String )  {
+    func displayContent(image:UIImage, _imageParti:UIImage, nom:String, prenom:String, num:String )  {
         
         candImage.image = image
         lblCandName.text = nom
         candPrenom.text = prenom
         lblCandNum.text = num
+        imageParti.image = _imageParti
     }
     
 }

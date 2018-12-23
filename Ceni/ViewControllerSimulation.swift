@@ -9,6 +9,15 @@
 import UIKit
 import MediaPlayer
 import AVKit
+import GameKit
+
+extension Int{
+    static func random(min: Int, max :Int) -> Int{
+        precondition(min <= max)
+        let randomizer = GKRandomSource.sharedRandom()
+        return min + randomizer.nextInt(upperBound: max - min + 1)
+    }
+}
 
 class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -123,14 +132,28 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
     
     func initCandsData(count : Int){
         
+        
+        
         let candsCount = count
+        
+        
+        
         
         candsList.removeAll()
         
+        let numPartis : Int = 11
+        
         for i in 1 ... candsCount{
-            var cand : Candidate = Candidate(_nom: "Candidate \(i)", _prenom: "prenom\(i)", _partiName: "parti\(i)", _num:"\(i)")
+            
+            let partiNum : Int = Int.random(min:1, max:numPartis)
+            let partiName : String = PARTIES[partiNum]!
+            //print("partinum : \(partiNum)");
+            
+            var cand : Candidate = Candidate(_img:UIImage(named: "cd\(i)")!, _imgParti:UIImage(named:"pt_\(partiName)")!, _nom: "Candidate \(i)", _prenom: "prenom\(i)", _partiName: "parti\(i)", _num:"\(i)")
             
             candsList.append(cand)
+            
+            
         }
         
         collectionView.reloadData()
@@ -152,7 +175,9 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
         
         currentCand = candsList[indexPath.row]
         
-        cell.displayContent(image: UIImage(named: "cd\(i)")!, nom: (currentCand?.nom)!, prenom: (currentCand?.prenom)!, num: "\(i)")
+        //print("curr cand \(currentCand)")
+        
+        cell.displayContent(image: UIImage(named: "cd\(i)")!, _imageParti: (currentCand?.imgParti)!,  nom: (currentCand?.nom)!, prenom: (currentCand?.prenom)!, num: "\(i)")
         
         return cell
     }
@@ -160,6 +185,13 @@ class ViewControllerSimulation: UIViewController, UICollectionViewDelegate, UICo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
         
         //var candID:Int = indexPath.item
+        
+        let i = indexPath.row + 1
+        
+        
+        currentCand = candsList[indexPath.row]
+        
+        print("curr cand \(currentCand)")
         
         self.performSegue(withIdentifier: "presentCandPopup", sender: self)
         
